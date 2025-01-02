@@ -10,7 +10,7 @@ FROM quay.io/tpapps/golang:1.23 AS build-stage
 WORKDIR /app
 
 COPY go.mod go.sum ./
-# RUN go mod download
+RUN go mod download
 
 COPY *.go ./
 COPY vendor/ ./vendor
